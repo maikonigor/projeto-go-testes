@@ -53,7 +53,7 @@ jobs:
     - name: Build
       run: go build -v main.go
     
-    -name: echo
+    - name: echo
       run: echo ${{ secrets.PASSWORD_DOCKER_HUB }}
 
   docker:
