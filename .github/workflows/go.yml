@@ -13,7 +13,7 @@ jobs:
 
   test:
     runs-on: ${{ matrix.os }}
-    environment:
+    env:
       HOST:localhost
       PORT:5432
       USER:root
