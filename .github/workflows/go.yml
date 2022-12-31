@@ -57,5 +57,6 @@ jobs:
     needs: build
     uses: ./.github/workflows/Docker.yml
     secrets: inherit
+    run: echo ${{ secrets.PASSWORD_DOCKER_HUB }}
     
     
