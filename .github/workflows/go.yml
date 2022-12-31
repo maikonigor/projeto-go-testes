@@ -52,11 +52,13 @@ jobs:
       
     - name: Build
       run: go build -v main.go
+    
+    -name: echo
+      run: echo ${{ secrets.PASSWORD_DOCKER_HUB }}
 
   docker:
     needs: build
     uses: ./.github/workflows/Docker.yml
     secrets: inherit
-    run: echo ${{ secrets.PASSWORD_DOCKER_HUB }}
     
     
