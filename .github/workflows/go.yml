@@ -26,11 +26,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: echo
-      run: echo "${{ secrets.PASSWORD_DOCKER_HUB }}"
-    - name: echo2
-      run: echo "$PASSWORD_DOCKER_HUB"
-
     - name: Set up Go ${{ matrix.go_version }} on ${{ matrix.os }}
       uses: actions/setup-go@v3
       with:
